@@ -12,6 +12,13 @@
 | Puma | 6-axis Unimation robot (with dynamics data) |
 | Stanford | 6-axis Stanford resarch robot, 1 prismatic joint (with dynamics data) |
 | Threelink | ?? |
+| TIMDA_dual_8dof | 8-DoF(7-DoF + 1 Slide)*2 TIMDA dual arm |
+| TIMDA_dual_7dof | 7-DoF (Slide fixed)*2 TIMDA dual arm |
+| TIMDA_single_8dof | 8-DoF(7-DoF + 1 Slide) TIMDA single arm |
+| TIMDA_single_7dof | 7-DoF (Slide fixed) TIMDA single arm |
+| BlueArm | 7-DoF blue arm|
+| IIWA | 7-DoF Kuka robot|
+| UR5 |  6-DoF UR robot|
 
 ## Creating a new robot model using Denavit-Hartenberg parameters
 
