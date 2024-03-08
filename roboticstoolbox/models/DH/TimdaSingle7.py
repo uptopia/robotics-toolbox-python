@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 @author: Gautam Sinha, Indian Institute of Technology, Kanpur
   (original MATLAB version)
@@ -12,23 +11,27 @@ from math import pi
 import numpy as np
 
 
-class TimdaDual8(DHRobot):
+class TimdaSingle7(DHRobot):
     """
-    Class that models a ICLAB TIMDA 8-DoF (7-DoF+1 Slide) manipulator
+    Class that models a ICLAB TIMDA 7-DoF (7-DoF+no Slide) manipulator
 
-    ``TimdaDual8()`` is a class which models a ICLAB TIMDA robot and
+    ``TimdaSingle7()`` is a class which models a ICLAB TIMDA robot and
     describes its kinematic characteristics using standard DH
     conventions.
 
     .. runblock:: pycon
 
         >>> import roboticstoolbox as rtb
-        >>> robot = rtb.models.DH.TimdaDual8()
+        >>> robot = rtb.models.DH.TimdaSingle7()
         >>> print(robot)
 
     Defined joint configurations are:
 
       - qk1, nominal working position 1 (TODO)
+      - qz, zero joint angle configuration, 'L' shaped configuration
+      - qr, vertical 'READY' configuration
+      - qs, arm is stretched out in the x-direction
+      - qn, arm is at a nominal non-singular configuration
 
     .. note::
       - SI units of metres are used.
@@ -90,9 +93,9 @@ class TimdaDual8(DHRobot):
         # Create SerialLink object
         super().__init__(
             L,
-            name="TimdaDual8",
+            name="TimdaSingle7",
             manufacturer="ICLAB",
-            # meshdir="meshes/ICLAB/TimdaDual8",
+            # meshdir="meshes/ICLAB/TimdaSingle7",
         )
 
         self.qr = np.array([pi / 2, pi / 2, pi, pi, 0.0, 0.0, 0.0])
@@ -101,5 +104,5 @@ class TimdaDual8(DHRobot):
 
 
 if __name__ == "__main__":  # pragma nocover
-    robot = TimdaDual8()
+    robot = TimdaSingle7()
     print(robot)

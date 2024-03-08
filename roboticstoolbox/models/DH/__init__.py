@@ -22,7 +22,7 @@ from roboticstoolbox.models.DH.TwoLink import TwoLink
 from roboticstoolbox.models.DH.Hyper3d import Hyper3d
 from roboticstoolbox.models.DH.P8 import P8
 from roboticstoolbox.models.DH.AL5D import AL5D
-from roboticstoolbox.models.DH.TimdaDual8 import TimdaDual8
+from roboticstoolbox.models.DH.TimdaSingle7 import TimdaSingle7
 
 __all__ = [
     'Panda',
@@ -49,5 +49,5 @@ __all__ = [
     'TwoLink',
     'P8',
     'AL5D',
-    'TimdaDual8',
+    'TimdaSingle7',
 ]
